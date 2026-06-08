@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    
+    <script>
+        let fact = 1;
+        let a = prompt("Enter the no. you want factorial of")
+        for(let i = 1; i <= a; i++)
+        {
+            fact*=i;
+        }
+
+        console.log("the factorial is: "+fact)
+
+        let c=[]
+        while (a>0) {
+            c.push(a)
+            a--;
+        }
+
+        const fac =(a ,b)=>{
+            return a*b;
+        }
+        
+        console.log("using reduce: " + c.reduce(fac))
+    </script>
+
+</body>
+</html>
