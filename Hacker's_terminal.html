@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's-Terminal</title>
+    <style>
+        .container{
+            background-color: rgb(7, 186, 7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            margin: 5px;
+            height: 100vh;
+        }
+        .box{
+            background: rgb(101, 241, 134);
+            border: solid rgb(1, 142, 64);
+            border-width: 2px;
+            width: 40vw;
+            height: 40vh;
+            padding: 25px;
+            margin: 55px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        /* .box p{
+            color: red;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            align-items: center;
+            font-weight: 600;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p id="para"></p>
+        </div>
+    </div>
+
+    <script>
+
+        const randno = Math.floor(Math.random()*7)+1;
+
+        const delay = ms => new Promise(res => setTimeout(res,ms));
+
+        const x = document.querySelector(".box")
+        x.style.cssText = "color: red; font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; align-items: center; font-weight: 600;"
+    
+
+        async function hack() {
+
+                const p = document.getElementById("para")
+                const ms = randno*1000
+                p.textContent = "Initializing Hacking"
+                console.log(randno)
+                
+
+                for(let i = 0; i<3; i++){
+                    await delay(500);
+                    p.textContent+= ".";
+                }
+                await delay(ms)
+
+
+                
+                p.textContent = "Reading Your Files"
+                
+
+                for(let i = 0; i<3; i++){
+                    await delay(500);
+                    p.textContent+= ".";
+                }
+                await delay(ms)
+
+                
+                p.textContent = "Password files Detected"
+
+                for(let i = 0; i<3; i++){
+                    await delay(500);
+                    p.textContent+= ".";
+                }
+            
+        }
+        hack()
+    </script>
+</body>
+</html>
