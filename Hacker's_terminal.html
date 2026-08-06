@@ -85,7 +85,23 @@
                     await delay(500);
                     p.textContent+= ".";
                 }
-            
+
+                await delay(ms);
+
+                p.textContent = "Sending all passwords and personal files to server"
+                
+                for(let i = 0; i<3; i++){
+                    await delay(500);
+                    p.textContent+= ".";
+                }
+                await delay(ms)
+
+                p.textContent = "Cleaning up"
+                for(let i = 0; i<3; i++){
+                    await delay(500);
+                    p.textContent+= ".";
+                }
+                await delay(ms)
         }
         hack()
     </script>
